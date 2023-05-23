@@ -29,7 +29,7 @@ const Sidebar = ({setActive, active}) => {
                     <span>Setting</span>
                 </li>
             </ul>
-            <div className='w-[58px] h-[58px] rounded-full flex justify-center items-center bg-[#1D1E24] text-4xl fixed bottom-8'>
+            <div className='w-[58px] h-[58px] rounded-full flex justify-center items-center bg-[#1D1E24] text-4xl fixed bottom-8 cursor-pointer' onClick={() => setActive('notebook')}>
                 <span className='-mt-2'>+</span>
                 </div>
         </div>

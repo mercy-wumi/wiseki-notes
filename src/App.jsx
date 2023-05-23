@@ -12,12 +12,12 @@ const dataNotes = [{
 {
   titleNote:'Timeline Amazing Task',
   noteText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor ut arcu eu nisl condimentum sit. Amet et purus pellentesque non auctor enim facilisi. Suspendisse arcu nunc semper quam blandit lectus. Scelerisque metus euismod sed lacus.',
-  category: 'love'
+  category: 'normal'
 }
 ,{
   titleNote:'Timeline Amazing Task',
   noteText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor ut arcu eu nisl condimentum sit. Amet et purus pellentesque non auctor enim facilisi. Suspendisse arcu nunc semper quam blandit lectus. Scelerisque metus euismod sed lacus.',
-  category: 'like'
+  category: 'normal'
 }]
 
 export default function App() {
@@ -26,9 +26,10 @@ export default function App() {
   const [active, setActive] = useState('allnote')
   const [allNotes, setAllNotes] = useState(dataNotes)
 
-const category = ['favorite', 'like', 'love']
+const category = ['favorite', 'normal']
 
-// console.log(Math.floor(Math.random() * 3))
+const rand = (Math.floor(Math.random() * 2))
+console.log(rand)
 
 const handleClick = () => {
   console.log('checking..')
@@ -37,7 +38,7 @@ const handleClick = () => {
     {
       titleNote: title,
       noteText: note,
-      category: category[Math.floor(Math.random() * 3)]
+      category: category[rand]
    }])
    console.log(allNotes)
 }
